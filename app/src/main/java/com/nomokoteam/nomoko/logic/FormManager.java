@@ -1,7 +1,5 @@
 package com.nomokoteam.nomoko.logic;
 
-import com.nomokoteam.nomoko.views.R;
-import android.content.res.Resources;
 
 public class FormManager {
     private final int SCORE_MAX_ESPRIT = 20;
@@ -10,9 +8,13 @@ public class FormManager {
     private final int SCORE_MAX_TACTIQUE = 16;
 
     /*Ces variables stockent le trait dominant de chaque catégorie*/
+    /*E : Extraversion / I : Introversion*/
     private String Esprit;
+    /*S : Sensation / N : Intuition*/
     private String Energie;
+    /*T : Pensée / F : Sentiment*/
     private String Nature;
+    /*J : Jugement / P : Perception*/
     private String Tactique;
 
     /*Ces variables stockent le pourcentage correspondant à chaque catégorie.*/
@@ -21,19 +23,23 @@ public class FormManager {
     private int NaturePourcent;
     private int TactiquePourcent;
 
+    /*Type de personnalité*/
+    private String personnalite;
 
     public FormManager() {
         /*Il s'agit là des valeurs par défaut, qui seront modifiées dès que le test de personnalité
         * sera complété par l'utilisateur.*/
-        this.Esprit = "Extraverti";
-        this.Energie = "Intuitif";
-        this.Nature = "Pensée";
-        this.Tactique = "Jugement";
+        this.Esprit = "E";
+        this.Energie = "N";
+        this.Nature = "T";
+        this.Tactique = "J";
 
         this.EspritPourcent = 50;
         this.EnergiePourcent = 50;
         this.NaturePourcent = 50;
         this.TactiquePourcent = 50;
+
+        personnalite = "";
     }
 
     /*
@@ -48,19 +54,19 @@ public class FormManager {
             if (res < 0) {
                 res = -res;
                 switch (i) {
-                    case 0: this.Esprit = "Introverti";
+                    case 0: this.Esprit = "I";
                         this.EspritPourcent = 100*res/SCORE_MAX_ESPRIT;
                         break;
 
-                    case 1: this.Energie = "Observateur";
+                    case 1: this.Energie = "S";
                         this.EnergiePourcent = 100*res/SCORE_MAX_ENERGIE;
                         break;
 
-                    case 2: this.Nature = "Sentiment";
+                    case 2: this.Nature = "F";
                         this.NaturePourcent = 100*res/SCORE_MAX_NATURE;
                         break;
 
-                    case 3: this.Tactique = "Prospection";
+                    case 3: this.Tactique = "P";
                         this.TactiquePourcent = 100*res/SCORE_MAX_TACTIQUE;
                         break;
                 }
@@ -78,7 +84,57 @@ public class FormManager {
                 case 3: this.TactiquePourcent = 100*res/SCORE_MAX_TACTIQUE;
                     break;
             }
-
+        }
+        String type = this.Esprit + this.Energie + this.Nature +this.Tactique;
+        switch (type) {
+            case "INTJ":
+                this.personnalite = "Architecte";
+                break;
+            case "INTP":
+                this.personnalite = "Logicien";
+                break;
+            case "ENTJ":
+                this.personnalite = "Commandant";
+                break;
+            case "ENTP":
+                this.personnalite = "Innovateur";
+                break;
+            case "INFJ":
+                this.personnalite = "Avocat";
+                break;
+            case "INFP":
+                this.personnalite = "Médiateur";
+                break;
+            case "ENFJ":
+                this.personnalite = "Protagoniste";
+                break;
+            case "ENFP":
+                this.personnalite = "Inspirateur";
+                break;
+            case "ISTJ":
+                this.personnalite = "Logisticien";
+                break;
+            case "ISFJ":
+                this.personnalite = "Défenseur";
+                break;
+            case "ESTJ":
+                this.personnalite = "Directeur";
+                break;
+            case "ESFJ":
+                this.personnalite = "Consul";
+                break;
+            case "ISTP":
+                this.personnalite = "Virtuose";
+                break;
+            case "ISFP":
+                this.personnalite = "Aventurier";
+                break;
+            case "ESTP":
+                this.personnalite = "Entrepreneur";
+                break;
+            case "ESFP":
+                this.personnalite = "Amuseur";
+                break;
         }
     }
 
@@ -117,19 +173,19 @@ public class FormManager {
 
     public void setTrait (String cat, String valeur) {
         if (cat.equals("Esprit")) {
-            if (valeur.equals("Introverti") || valeur.equals("Extraverti")) {
+            if (valeur.equals("I") || valeur.equals("E")) {
                 this.Esprit = valeur;
             }
         } else if (cat.equals("Energie")) {
-            if (valeur.equals("Intuitif") || valeur.equals("Observateur")) {
+            if (valeur.equals("N") || valeur.equals("S")) {
                 this.Energie = valeur;
             }
         } else if (cat.equals("Nature")) {
-            if (valeur.equals("Pensee") || valeur.equals("Sentiment")) {
+            if (valeur.equals("T") || valeur.equals("F")) {
                 this.Nature = valeur;
             }
         } else if (cat.equals("Tactique")) {
-            if (valeur.equals("Jugement") || valeur.equals("Prospection")) {
+            if (valeur.equals("J") || valeur.equals("P")) {
                 this.Tactique = valeur;
             }
         } else {
