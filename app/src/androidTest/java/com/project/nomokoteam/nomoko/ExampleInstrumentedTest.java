@@ -1,4 +1,4 @@
-package com.example.timon.nomoko;
+package com.project.nomokoteam.nomoko;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

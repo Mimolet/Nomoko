@@ -1,4 +1,4 @@
-package com.example.timon.nomoko;
+package com.project.nomokoteam.nomoko;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

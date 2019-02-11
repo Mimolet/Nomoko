@@ -1,4 +1,4 @@
-package com.example.timon.nomoko;
+package com.project.nomokoteam.nomoko;
 
 import org.junit.Test;
 
