@@ -1,4 +1,4 @@
-package com.project.nomokoteam.nomoko;
+package com.nomokoteam.nomoko.views;
 
 import org.junit.Test;
 

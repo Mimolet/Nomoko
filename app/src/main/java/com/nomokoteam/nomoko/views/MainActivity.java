@@ -1,4 +1,4 @@
-package com.project.nomokoteam.nomoko;
+package com.nomokoteam.nomoko.views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
