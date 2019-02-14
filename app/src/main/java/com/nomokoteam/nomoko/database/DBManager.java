@@ -31,6 +31,61 @@ public class DBManager extends SQLiteOpenHelper {
             + "FOREIGN KEY (" + QUESTION_CAT2 + ") REFERENCES " + CATEGORIE_TABLE_NAME + " (" + CATEGORIE_KEY + ")); ";
     public static final String QUESTION_TABLE_DROP = "DROP TABLE IF EXISTS " + QUESTION_TABLE_NAME + ";";
 
+    /*TABLE DEFIS*/
+
+    public static final String DEFI_KEY = "idDefi";
+    public static final String DEFI_NAME = "nomDefi";
+    public static final String DEFI_TEXT = "txtDefi";
+    public static final String DEFI_DUREE = "dureeDefi";
+    public static final String DEFI_CAT = "categorieDefi";
+    public static final String DEFI_TRAIT = "traitDefi";
+    public static final String DEFI_REUSSI = "reussiDefi";
+    public static final String DEFI_ILLU_PATH = "illustrationPathDefi";
+    public static final String DEFI_DIFFICULTE = "difficulte";
+    public static final String DEFI_TABLE_NAME = "Défis";
+    public static final String DEFI_TABLE_CREATE = "CREATE TABLE " + DEFI_TABLE_NAME + " (" + DEFI_KEY +
+            " INTEGER PRIMARY KEY AUTOINCREMENT, " + DEFI_TEXT + " TEXT, " + DEFI_DUREE + " INTEGER, " +
+            DEFI_CAT + " TEXT, " + DEFI_TRAIT + " TEXT, " + DEFI_REUSSI + " BOOLEAN, " + DEFI_ILLU_PATH +
+            " TEXT, " + DEFI_DIFFICULTE + " INTEGER);";
+    public static final String DEFI_TABLE_DROP = "DROP TABLE IF EXISTS " + DEFI_TABLE_NAME + ";";
+
+    /*TABLE TROPHEES*/
+
+    public static final String TROPHEE_KEY = "idTrophee";
+    public static final String TROPHEE_NAME = "nomTro";
+    public static final String TROPHEE_TEXT = "txTro";
+    public static final String TROPHEE_OBTENU = "obtenuTro";
+    public static final String TROPHEE_ILLU_PATH = "illustrationPathTro";
+    public static final String TROPHEE_TABLE_NAME = "Trophées";
+    public static final String TROPHEE_TABLE_CREATE = "CREATE TABLE " + TROPHEE_TABLE_NAME + " (" +
+            TROPHEE_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TROPHEE_NAME + " TEXT, " + TROPHEE_TEXT +
+            " TEXT, " + TROPHEE_OBTENU + " BOOLEAN, " + TROPHEE_ILLU_PATH + " TEXT);";
+    public static final String TROPHEE_TABLE_DROP = "DROP TABLE IF EXISTS  " + TROPHEE_TABLE_NAME + ";";
+
+    /*TABLE RECOMPENSES*/
+
+    public static final String RECOM_KEY = "idRecompense";
+    public static final String RECOM_TEXTE = "txtRec";
+    public static final String RECOM_OBTENUE = "obtenuRec";
+    public static final String RECOM_TABLE_NAME = "Récompenses";
+    public static final String RECOM_TABLE_CREATE = "CREATE TABLE " + RECOM_TABLE_NAME + " (" +
+            RECOM_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, " + RECOM_TEXTE + " TEXT, " + RECOM_OBTENUE +
+            " BOOLEAN);";
+    public static final String RECOM_TABLE_DROP = "DROP TABLE IF EXISTS " + RECOM_TABLE_NAME + ";";
+
+    /*TABLE UTILISATEUR*/
+
+    public static final String USER_KEY = "idUtilisateur";
+    public static final String USER_NAME = "prenom";
+    public static final String USER_AGE = "age";
+    public static final String USER_SEXE = "sexe";
+    public static final String USER_PERSO = "personnalite";
+    public static final String USER_AVATAR = "avatar";
+    public static final String USER_TABLE_NAME = "Utilisateur";
+    public static final String USER_TABLE_CREATE = "CREATE TABLE " + USER_TABLE_NAME + " (" + USER_KEY +
+            " INTEGER PRIMARY KEY AUTOINCREMENT, " + USER_NAME + " TEXT, " + USER_AGE + " INTEGER, " +
+            USER_SEXE + " TEXT, " + USER_PERSO + " TEXT, " + USER_AVATAR + " TEXT);";
+    public static final String USER_TABLE_DROP = "DROP TABLE IF EXISTS " + USER_TABLE_NAME + ";";
 
     public DBManager(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -40,12 +95,20 @@ public class DBManager extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CATEGORIE_TABLE_CREATE);
         db.execSQL(QUESTION_TABLE_CREATE);
+        db.execSQL(DEFI_TABLE_CREATE);
+        db.execSQL(TROPHEE_TABLE_CREATE);
+        db.execSQL(RECOM_TABLE_CREATE);
+        db.execSQL(USER_TABLE_CREATE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(QUESTION_TABLE_DROP);
         db.execSQL(CATEGORIE_TABLE_DROP);
+        db.execSQL(DEFI_TABLE_DROP);
+        db.execSQL(TROPHEE_TABLE_DROP);
+        db.execSQL(RECOM_TABLE_DROP);
+        db.execSQL(USER_TABLE_DROP);
         onCreate(db);
     }
 }

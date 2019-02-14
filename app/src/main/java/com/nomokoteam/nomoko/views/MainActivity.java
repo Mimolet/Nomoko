@@ -4,9 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.nomokoteam.nomoko.database.DBManager;
-import com.nomokoteam.nomoko.database.Question;
-import com.nomokoteam.nomoko.database.QuestionDAO;
+import com.nomokoteam.nomoko.database.infos.Question;
+import com.nomokoteam.nomoko.database.dao.QuestionDAO;
 
 public class MainActivity extends AppCompatActivity {
 

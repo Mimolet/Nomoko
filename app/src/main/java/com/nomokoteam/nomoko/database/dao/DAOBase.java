@@ -1,7 +1,9 @@
-package com.nomokoteam.nomoko.database;
+package com.nomokoteam.nomoko.database.dao;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.nomokoteam.nomoko.database.DBManager;
 
 
 /*Cette classe sert de base pour créer des classes d'accès à la base de données.*/

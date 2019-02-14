@@ -1,8 +1,10 @@
-package com.nomokoteam.nomoko.database;
+package com.nomokoteam.nomoko.database.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+
+import com.nomokoteam.nomoko.database.infos.Question;
 
 public class QuestionDAO extends DAOBase {
     public static final String TABLE_NAME = "Question";
@@ -40,8 +42,7 @@ public class QuestionDAO extends DAOBase {
 
     /*Sélection de la question*/
     public Question selectionner (long idQuest) {
-        Cursor c = this.mDb.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + KEY + " == ?", new String[]{"idQuest"});
-        System.out.println("##################################" + c.getCount());
+        Cursor c = this.mDb.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + KEY + " = ?", new String[]{Long.toString(idQuest)});
         if (!c.moveToFirst()) {
             c.close();
             return null;

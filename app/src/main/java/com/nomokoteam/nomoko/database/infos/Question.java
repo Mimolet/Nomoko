@@ -1,4 +1,4 @@
-package com.nomokoteam.nomoko.database;
+package com.nomokoteam.nomoko.database.infos;
 
 public class Question {
     private long idQuest;
