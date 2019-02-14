@@ -1,5 +1,6 @@
 package com.nomokoteam.nomoko.database.dao;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
@@ -16,7 +17,10 @@ public class RecompenseDAO extends DAOBase {
     }
 
     public void ajouter (Recompense r) {
-
+        ContentValues valeur = new ContentValues();
+        valeur.put(RecompenseDAO.TEXTE, r.getTxtRec());
+        valeur.put(RecompenseDAO.OBTENUE, r.isObtenuRec());
+        this.mDb.insert(DefisDAO.TABLE_NAME, null, valeur);
     }
 
     public Recompense selectionner (long idRecompense) {

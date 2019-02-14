@@ -1,5 +1,6 @@
 package com.nomokoteam.nomoko.database.dao;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
@@ -18,7 +19,12 @@ public class TropheesDAO extends DAOBase {
     }
 
     public void ajouter (Trophee t) {
-
+        ContentValues valeur = new ContentValues();
+        valeur.put(TropheesDAO.NAME, t.getNomTro());
+        valeur.put(TropheesDAO.TEXT, t.getTxtTro());
+        valeur.put(TropheesDAO.OBTENU, t.isObtenuTro());
+        valeur.put(TropheesDAO.ILLU_PATH, t.getIllustrationPathTro());
+        this.mDb.insert(TropheesDAO.TABLE_NAME, null, valeur);
     }
 
     public Trophee selectionner (long idTrophee) {
