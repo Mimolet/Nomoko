@@ -13,7 +13,7 @@ public class DBManager extends SQLiteOpenHelper {
     public static final String CATEGORIE_SIGNE = "signeCat";
     public static final String CATEGORIE_TABLE_NAME = "Categorie";
     public static final String CATEGORIE_TABLE_CREATE = "CREATE TABLE " + CATEGORIE_TABLE_NAME +
-            " (" + CATEGORIE_KEY + "INTEGER PRIMARY KEY AUTOINCREMENT, " + CATEGORIE_NAME + " TEXT, " +
+            " (" + CATEGORIE_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, " + CATEGORIE_NAME + " TEXT, " +
             CATEGORIE_SIGNE + " TEXT);";
     public static final String CATEGORIE_TABLE_DROP = "DROP TABLE IF EXISTS " + CATEGORIE_TABLE_NAME + ";";
 
@@ -25,7 +25,7 @@ public class DBManager extends SQLiteOpenHelper {
     public static final String QUESTION_CAT2 = "idCat2";
     public static final String QUESTION_TABLE_NAME = "Question";
     public static final String QUESTION_TABLE_CREATE = "CREATE TABLE " + QUESTION_TABLE_NAME + " ("
-            + QUESTION_KEY + "INTEGER PRIMARY KEY AUTOINCREMENT, " + QUESTION_TEXT + " TEXT, " +
+            + QUESTION_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, " + QUESTION_TEXT + " TEXT, " +
             QUESTION_CAT1 + " INTEGER, " + QUESTION_CAT2 + " INTEGER, " + "FOREIGN KEY (" +
             QUESTION_CAT1 + ") REFERENCES " + CATEGORIE_TABLE_NAME + " (" + CATEGORIE_KEY + "), "
             + "FOREIGN KEY (" + QUESTION_CAT2 + ") REFERENCES " + CATEGORIE_TABLE_NAME + " (" + CATEGORIE_KEY + ")); ";

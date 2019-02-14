@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 /*Cette classe sert de base pour créer des classes d'accès à la base de données.*/
 public abstract class DAOBase {
-    protected final static int VERSION = 1;
+    protected final static int VERSION = 3;
     protected final static String NOM = "database.db";
     protected SQLiteDatabase mDb = null;
     protected DBManager manager = null;
@@ -16,15 +16,15 @@ public abstract class DAOBase {
     }
 
     public SQLiteDatabase open() {
-        mDb = manager.getWritableDatabase();
+        this.mDb = manager.getWritableDatabase();
         return mDb;
     }
 
     public void close() {
-        mDb.close();
+        this.mDb.close();
     }
 
     public SQLiteDatabase getDb() {
-        return mDb;
+        return this.mDb;
     }
 }

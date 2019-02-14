@@ -12,4 +12,5 @@
     <string name="sentiment_name">Sentiment</string>
     <string name="jugement_name">Jugement</string>
     <string name="prospection_name">Prospection</string>
+    <string name="testDBQuestion">Question</string>
 </resources>

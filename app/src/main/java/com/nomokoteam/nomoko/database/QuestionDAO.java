@@ -40,11 +40,15 @@ public class QuestionDAO extends DAOBase {
 
     /*Sélection de la question*/
     public Question selectionner (long idQuest) {
-        Cursor c = this.mDb.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE ID == ?", new String[]{"idQuest"});
+        Cursor c = this.mDb.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + KEY + " == ?", new String[]{"idQuest"});
+        System.out.println("##################################" + c.getCount());
         if (!c.moveToFirst()) {
+            c.close();
             return null;
         }
-        return new Question(idQuest, c.getString(1), c.getLong(2), c.getLong(3));
+        Question resultat = new Question(idQuest, c.getString(1), c.getLong(2), c.getLong(3));
+        c.close();
+        return resultat;
     }
     
 }
