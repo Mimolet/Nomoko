@@ -6,6 +6,8 @@ import android.database.Cursor;
 
 import com.nomokoteam.nomoko.database.infos.Defi;
 
+import java.util.ArrayList;
+
 public class DefisDAO extends DAOBase {
     public static final String KEY = "idDefi";
     public static final String NAME = "nomDefi";
@@ -47,5 +49,26 @@ public class DefisDAO extends DAOBase {
                 c.getInt(6) == 1, c.getString(7), c.getInt(8));
         c.close();
         return resultat;
+    }
+
+    public ArrayList<Defi> selectionnerTousLesDefis () {
+        ArrayList<Defi> resultats = new ArrayList<Defi>();
+        Cursor c = mDb.rawQuery("SELECT * FROM " + TABLE_NAME, new String[]{});
+        if (!c.moveToFirst()) {
+            c.close();
+            return null;
+        }
+        Defi resultat = new Defi(c.getLong(0), c.getString(1), c.getString(2),
+                c.getInt(3), c.getString(4), c.getString(5),
+                c.getInt(6) == 1, c.getString(7), c.getInt(8));
+        resultats.add(resultat);
+        while(c.moveToNext()) {
+            resultat = new Defi(c.getLong(0), c.getString(1), c.getString(2),
+                    c.getInt(3), c.getString(4), c.getString(5),
+                    c.getInt(6) == 1, c.getString(7), c.getInt(8));
+            resultats.add(resultat);
+        }
+        c.close();
+        return resultats;
     }
 }

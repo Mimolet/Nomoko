@@ -13,4 +13,6 @@
     <string name="jugement_name">Jugement</string>
     <string name="prospection_name">Prospection</string>
     <string name="testDBQuestion">Question</string>
+    <string name="notifTitre">De nouveaux défis sont disponibles !</string>
+    <string name="notifTexte">Venez choisir un nouveau défi parmi les trois disponibles !</string>
 </resources>

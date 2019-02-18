@@ -3,18 +3,24 @@ package com.nomokoteam.nomoko.database.infos;
 public class Utilisateur {
     private long idUtilisateur;
     private String prenom;
-    private int age;
-    private String sexe;
     private String personnalite;
     private String avatar;
+    private String energie;
+    private String esprit;
+    private String nature;
+    private String tactique;
 
-    public Utilisateur(long idUtilisateur, String prenom, int age, String sexe, String personnalite, String avatar) {
+
+
+    public Utilisateur(long idUtilisateur, String prenom, String personnalite, String avatar, String energie, String esprit, String nature, String tactique) {
         this.idUtilisateur = idUtilisateur;
         this.prenom = prenom;
-        this.age = age;
-        this.sexe = sexe;
         this.personnalite = personnalite;
         this.avatar = avatar;
+        this.energie = energie;
+        this.esprit = esprit;
+        this.nature = nature;
+        this.tactique = tactique;
     }
 
     public long getIdUtilisateur() {
@@ -33,22 +39,6 @@ public class Utilisateur {
         this.prenom = prenom;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getSexe() {
-        return sexe;
-    }
-
-    public void setSexe(String sexe) {
-        this.sexe = sexe;
-    }
-
     public String getPersonnalite() {
         return personnalite;
     }
@@ -63,5 +53,37 @@ public class Utilisateur {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    public String getEnergie() {
+        return energie;
+    }
+
+    public void setEnergie(String energie) {
+        this.energie = energie;
+    }
+
+    public String getEsprit() {
+        return esprit;
+    }
+
+    public void setEsprit(String esprit) {
+        this.esprit = esprit;
+    }
+
+    public String getNature() {
+        return nature;
+    }
+
+    public void setNature(String nature) {
+        this.nature = nature;
+    }
+
+    public String getTactique() {
+        return tactique;
+    }
+
+    public void setTactique(String tactique) {
+        this.tactique = tactique;
     }
 }

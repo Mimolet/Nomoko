@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Question q = questionDAO.selectionner(1);
 
 
-        TextView t = (TextView) findViewById(R.id.hey);
+        TextView t = findViewById(R.id.hey);
         t.setText(q.getTexte());
 
         questionDAO.close();

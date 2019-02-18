@@ -77,14 +77,17 @@ public class DBManager extends SQLiteOpenHelper {
 
     public static final String USER_KEY = "idUtilisateur";
     public static final String USER_NAME = "prenom";
-    public static final String USER_AGE = "age";
-    public static final String USER_SEXE = "sexe";
     public static final String USER_PERSO = "personnalite";
     public static final String USER_AVATAR = "avatar";
+    public static final String USER_ENERGIE = "energie";
+    public static final String USER_ESPRIT = "esprit";
+    public static final String USER_NATURE = "nature";
+    public static final String USER_TACTIQUE = "tactique";
     public static final String USER_TABLE_NAME = "Utilisateur";
     public static final String USER_TABLE_CREATE = "CREATE TABLE " + USER_TABLE_NAME + " (" + USER_KEY +
-            " INTEGER PRIMARY KEY AUTOINCREMENT, " + USER_NAME + " TEXT, " + USER_AGE + " INTEGER, " +
-            USER_SEXE + " TEXT, " + USER_PERSO + " TEXT, " + USER_AVATAR + " TEXT);";
+            " INTEGER PRIMARY KEY AUTOINCREMENT, " + USER_NAME + " TEXT, " + USER_PERSO + " TEXT, " +
+            USER_AVATAR + " TEXT, " + USER_ENERGIE + " TEXT, " + USER_ESPRIT + " TEXT, " + USER_NATURE +
+            " TEXT, " + USER_TACTIQUE + " TEXT);";
     public static final String USER_TABLE_DROP = "DROP TABLE IF EXISTS " + USER_TABLE_NAME + ";";
 
     public DBManager(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
