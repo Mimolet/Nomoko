@@ -1,7 +1,6 @@
 package com.nomokoteam.nomoko.logic;
 
 import android.app.IntentService;
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -12,9 +11,8 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 
 import com.nomokoteam.nomoko.database.dao.DefisDAO;
-import com.nomokoteam.nomoko.database.dao.UtilisateurDAO;
 import com.nomokoteam.nomoko.database.infos.Defi;
-import com.nomokoteam.nomoko.database.infos.Utilisateur;
+import com.nomokoteam.nomoko.views.AccueilActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -61,7 +59,7 @@ public class ChallengeService extends IntentService {
         Date dateCourante = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("HH");
         if (this.HEURE_DEFI.equals(dateFormat.format(dateCourante))) {
-            /*Choix des 3 défis proposés + envoi notification*/
+            choixDefi();
         }
         return super.onStartCommand(intent, flags, startId);
     }
@@ -102,27 +100,79 @@ public class ChallengeService extends IntentService {
                 }
             }
         }
-        /*TODO : choix aléatoire dans la liste, puis envoi d'une notification et inscription dans les données à destinatation de l'activité d'accueil*/
+
+        if (listeModifiee.size() <= 3) {
+            if (listeModifiee.size() == 0) {
+                notifieNvxDefis(new ArrayList<Defi>());
+            } else {
+                notifieNvxDefis(listeModifiee);
+            }
+
+        } else {
+            int deuxiemeDefiIndex = -1;
+            int troisièmeDefiIndex = -1;
+            ArrayList<Defi> defisChoisis = new ArrayList<Defi>();
+            int premierDefiIndex = (int)(Math.random() * listeModifiee.size());
+            while (deuxiemeDefiIndex == premierDefiIndex || deuxiemeDefiIndex == -1) {
+                deuxiemeDefiIndex = (int)(Math.random() * listeModifiee.size());
+            }
+            while (troisièmeDefiIndex == deuxiemeDefiIndex || troisièmeDefiIndex == premierDefiIndex || troisièmeDefiIndex == -1) {
+                troisièmeDefiIndex = (int)(Math.random() * listeModifiee.size());
+            }
+            defisChoisis.add(listeModifiee.get(premierDefiIndex));
+            defisChoisis.add(listeModifiee.get(deuxiemeDefiIndex));
+            defisChoisis.add(listeModifiee.get(troisièmeDefiIndex));
+
+            notifieNvxDefis(defisChoisis);
+        }
     }
 
-    private void notifieNvxDefis () {
+    private void notifieNvxDefis (ArrayList<Defi> defisAEnvoyer) {
+        /*Création de la notification*/
         CharSequence titreNotif = getString(R.string.notifTitre);
         CharSequence texteNotif = getString(R.string.notifTexte);
         NotificationCompat.Builder notifBuilder = new NotificationCompat.Builder(this, CHANNEL_ID);
         notifBuilder.setContentTitle(titreNotif);
         notifBuilder.setContentText(texteNotif);
         notifBuilder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
-        /*TODO : modifier le nom de l'activité cible*/
-/*
-        Intent intent = new Intent (this, ActiviteAccueil.class);
+
+        /*Récupération des id des défis à envoyer*/
+        long [] idDefis = new long [3];
+        switch (defisAEnvoyer.size()) {
+            case 0 :
+                idDefis[0] = -1;
+                idDefis[1] = -1;
+                idDefis[2] = -1;
+            case 1 :
+                idDefis[0] = defisAEnvoyer.get(0).getIdDefi();
+                idDefis[1] = -1;
+                idDefis[2] = -1;
+                break;
+            case 2 :
+                idDefis[0] = defisAEnvoyer.get(0).getIdDefi();
+                idDefis[1] = defisAEnvoyer.get(1).getIdDefi();
+                idDefis[2] = -1;
+                break;
+            case 3 :
+                idDefis[0] = defisAEnvoyer.get(0).getIdDefi();
+                idDefis[1] = defisAEnvoyer.get(1).getIdDefi();
+                idDefis[2] = defisAEnvoyer.get(2).getIdDefi();
+                break;
+        }
+
+        /*Envoi de la notification*/
+        Intent intent = new Intent (this, AccueilActivity.class);
+        intent.putExtra("tableauIDDefis", idDefis);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
         notifBuilder.setContentIntent(pendingIntent);
         notifBuilder.setAutoCancel(true);
-*/
+
     }
 
-    /*Code récup en ligne sur developpers.android.com*/
+    /*Code récup en ligne sur developpers.android.com
+    * Création d'une channel pour la gestion des notifications
+    * */
     private void createNotificationChannel () {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = getString(R.string.channel_name);
@@ -133,7 +183,6 @@ public class ChallengeService extends IntentService {
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
         }
-
     }
 }
 

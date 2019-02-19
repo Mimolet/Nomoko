@@ -11,17 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.nomokoteam.nomoko.views.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name="com.nomokoteam.nomoko.logic.ChallengeService"
-            android:process=":defis">
 
-        </service>
+        <service
+            android:name="com.nomokoteam.nomoko.logic.ChallengeService"
+            android:process=":defis" />
+
+        <activity android:name=".AccueilActivity" />
+        <activity android:name=".InscriptionActivity"></activity>
     </application>
 
 </manifest>

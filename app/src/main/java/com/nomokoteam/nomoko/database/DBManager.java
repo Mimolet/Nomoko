@@ -73,23 +73,6 @@ public class DBManager extends SQLiteOpenHelper {
             " BOOLEAN);";
     public static final String RECOM_TABLE_DROP = "DROP TABLE IF EXISTS " + RECOM_TABLE_NAME + ";";
 
-    /*TABLE UTILISATEUR*/
-
-    public static final String USER_KEY = "idUtilisateur";
-    public static final String USER_NAME = "prenom";
-    public static final String USER_PERSO = "personnalite";
-    public static final String USER_AVATAR = "avatar";
-    public static final String USER_ENERGIE = "energie";
-    public static final String USER_ESPRIT = "esprit";
-    public static final String USER_NATURE = "nature";
-    public static final String USER_TACTIQUE = "tactique";
-    public static final String USER_TABLE_NAME = "Utilisateur";
-    public static final String USER_TABLE_CREATE = "CREATE TABLE " + USER_TABLE_NAME + " (" + USER_KEY +
-            " INTEGER PRIMARY KEY AUTOINCREMENT, " + USER_NAME + " TEXT, " + USER_PERSO + " TEXT, " +
-            USER_AVATAR + " TEXT, " + USER_ENERGIE + " TEXT, " + USER_ESPRIT + " TEXT, " + USER_NATURE +
-            " TEXT, " + USER_TACTIQUE + " TEXT);";
-    public static final String USER_TABLE_DROP = "DROP TABLE IF EXISTS " + USER_TABLE_NAME + ";";
-
     public DBManager(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
@@ -101,7 +84,6 @@ public class DBManager extends SQLiteOpenHelper {
         db.execSQL(DEFI_TABLE_CREATE);
         db.execSQL(TROPHEE_TABLE_CREATE);
         db.execSQL(RECOM_TABLE_CREATE);
-        db.execSQL(USER_TABLE_CREATE);
     }
 
     @Override
@@ -111,7 +93,6 @@ public class DBManager extends SQLiteOpenHelper {
         db.execSQL(DEFI_TABLE_DROP);
         db.execSQL(TROPHEE_TABLE_DROP);
         db.execSQL(RECOM_TABLE_DROP);
-        db.execSQL(USER_TABLE_DROP);
         onCreate(db);
     }
 }
