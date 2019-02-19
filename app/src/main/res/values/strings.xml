@@ -1,17 +1,5 @@
 <resources>
     <string name="app_name">Nomoko</string>
-    <string name="esprit_cat_name">Esprit</string>
-    <string name="energie_cat_name">Energie</string>
-    <string name="nature_cat_name">Nature</string>
-    <string name="tactique_cat_name">Tactique</string>
-    <string name="introverti_name">Introverti</string>
-    <string name="extraverti_name">Extraverti</string>
-    <string name="intuitif_name">Intuitif</string>
-    <string name="observateur_name">Observateur</string>
-    <string name="pensee_name">Pensée</string>
-    <string name="sentiment_name">Sentiment</string>
-    <string name="jugement_name">Jugement</string>
-    <string name="prospection_name">Prospection</string>
     <string name="testDBQuestion">Question</string>
     <string name="notifTitre">De nouveaux défis sont disponibles !</string>
     <string name="notifTexte">Venez choisir un nouveau défi parmi les trois disponibles !</string>
