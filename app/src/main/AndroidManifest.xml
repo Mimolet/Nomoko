@@ -5,12 +5,12 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:fullBackupContent="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -25,9 +25,12 @@
             android:process=":defis" />
 
         <activity android:name=".views.AccueilActivity" />
-        <activity android:name=".views.InscriptionActivity">
+        <activity android:name=".views.InscriptionActivity"></activity>
+        <activity android:name=".views.RecompenseActivity"></activity>
 
-        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
