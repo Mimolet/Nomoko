@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.n.nomoko.database.dao.DefisDAO;
 import com.n.nomoko.database.infos.Defi;
-
+import com.n.nomoko.*;
 import java.util.ArrayList;
 
 public class AccueilActivity extends AppCompatActivity {

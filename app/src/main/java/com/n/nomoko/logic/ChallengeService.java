@@ -13,6 +13,7 @@ import android.support.v4.app.NotificationCompat;
 import com.n.nomoko.database.dao.DefisDAO;
 import com.n.nomoko.database.infos.Defi;
 import com.n.nomoko.views.AccueilActivity;
+import com.n.nomoko.*;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
