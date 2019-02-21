@@ -11,7 +11,7 @@ public class DBManager extends SQLiteOpenHelper {
     public static final String CATEGORIE_KEY = "idCat";
     public static final String CATEGORIE_NAME = "nomCat";
     public static final String CATEGORIE_SIGNE = "signeCat";
-    public static final String CATEGORIE_TABLE_NAME = "Categorie";
+    public static final String CATEGORIE_TABLE_NAME = "Catégorie";
     public static final String CATEGORIE_TABLE_CREATE = "CREATE TABLE " + CATEGORIE_TABLE_NAME +
             " (" + CATEGORIE_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, " + CATEGORIE_NAME + " TEXT, " +
             CATEGORIE_SIGNE + " TEXT);";
@@ -42,9 +42,9 @@ public class DBManager extends SQLiteOpenHelper {
     public static final String DEFI_REUSSI = "reussiDefi";
     public static final String DEFI_ILLU_PATH = "illustrationPathDefi";
     public static final String DEFI_DIFFICULTE = "difficulte";
-    public static final String DEFI_TABLE_NAME = "Défis";
+    public static final String DEFI_TABLE_NAME = "Defis";
     public static final String DEFI_TABLE_CREATE = "CREATE TABLE " + DEFI_TABLE_NAME + " (" + DEFI_KEY +
-            " INTEGER PRIMARY KEY AUTOINCREMENT, " + DEFI_TEXT + " TEXT, " + DEFI_DUREE + " INTEGER, " +
+            " INTEGER PRIMARY KEY AUTOINCREMENT, " + DEFI_NAME + " TEXT, " + DEFI_TEXT + " TEXT, " + DEFI_DUREE + " INTEGER, " +
             DEFI_CAT + " TEXT, " + DEFI_TRAIT + " TEXT, " + DEFI_REUSSI + " BOOLEAN, " + DEFI_ILLU_PATH +
             " TEXT, " + DEFI_DIFFICULTE + " INTEGER);";
     public static final String DEFI_TABLE_DROP = "DROP TABLE IF EXISTS " + DEFI_TABLE_NAME + ";";
@@ -56,7 +56,7 @@ public class DBManager extends SQLiteOpenHelper {
     public static final String TROPHEE_TEXT = "txTro";
     public static final String TROPHEE_OBTENU = "obtenuTro";
     public static final String TROPHEE_ILLU_PATH = "illustrationPathTro";
-    public static final String TROPHEE_TABLE_NAME = "Trophées";
+    public static final String TROPHEE_TABLE_NAME = "Trophees";
     public static final String TROPHEE_TABLE_CREATE = "CREATE TABLE " + TROPHEE_TABLE_NAME + " (" +
             TROPHEE_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TROPHEE_NAME + " TEXT, " + TROPHEE_TEXT +
             " TEXT, " + TROPHEE_OBTENU + " BOOLEAN, " + TROPHEE_ILLU_PATH + " TEXT);";
@@ -67,7 +67,7 @@ public class DBManager extends SQLiteOpenHelper {
     public static final String RECOM_KEY = "idRecompense";
     public static final String RECOM_TEXTE = "txtRec";
     public static final String RECOM_OBTENUE = "obtenuRec";
-    public static final String RECOM_TABLE_NAME = "Récompenses";
+    public static final String RECOM_TABLE_NAME = "Recompenses";
     public static final String RECOM_TABLE_CREATE = "CREATE TABLE " + RECOM_TABLE_NAME + " (" +
             RECOM_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, " + RECOM_TEXTE + " TEXT, " + RECOM_OBTENUE +
             " BOOLEAN);";

@@ -25,12 +25,16 @@
             android:process=":defis" />
 
         <activity android:name=".views.AccueilActivity" />
-        <activity android:name=".views.InscriptionActivity"></activity>
-        <activity android:name=".views.RecompenseActivity"></activity>
+        <activity android:name=".views.InscriptionActivity" />
+        <activity android:name=".views.RecompenseActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name=".database.FillDBService"
+            android:exported="false"></service>
     </application>
 
 </manifest>

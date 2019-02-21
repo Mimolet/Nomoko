@@ -13,18 +13,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        QuestionDAO questionDAO = new QuestionDAO(this);
-        questionDAO.open();
-        questionDAO.ajouter(new Question(1, "Bonjour c'est la question", 1, 2));
-        Question q = questionDAO.selectionner(1);
-
-
-        TextView t = findViewById(R.id.hey);
-        t.setText(q.getTexte());
-
-        questionDAO.close();
-
     }
 }

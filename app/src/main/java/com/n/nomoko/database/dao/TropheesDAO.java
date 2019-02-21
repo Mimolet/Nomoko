@@ -12,7 +12,7 @@ public class TropheesDAO extends DAOBase {
     public static final String TEXT = "txTro";
     public static final String OBTENU = "obtenuTro";
     public static final String ILLU_PATH = "illustrationPathTro";
-    public static final String TABLE_NAME = "Trophées";
+    public static final String TABLE_NAME = "Trophees";
 
     public TropheesDAO(Context pContext) {
         super(pContext);

@@ -10,7 +10,7 @@ public class RecompenseDAO extends DAOBase {
     public static final String KEY = "idRecompense";
     public static final String TEXTE = "txtRec";
     public static final String OBTENUE = "obtenuRec";
-    public static final String TABLE_NAME = "Récompenses";
+    public static final String TABLE_NAME = "Recompenses";
 
     public RecompenseDAO(Context pContext) {
         super(pContext);

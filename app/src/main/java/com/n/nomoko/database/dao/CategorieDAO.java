@@ -16,11 +16,11 @@ public class CategorieDAO extends DAOBase {
         super(pContext);
     }
 
-    public void ajouter (Categorie cat) {
+    public long ajouter (Categorie cat) {
         ContentValues valeur = new ContentValues();
         valeur.put(CategorieDAO.NAME, cat.getNomCat());
         valeur.put(CategorieDAO.SIGNE, cat.getSigneCat());
-        this.mDb.insert(QuestionDAO.TABLE_NAME, null, valeur);
+        return this.mDb.insert(QuestionDAO.TABLE_NAME, null, valeur);
     }
 
     public Categorie selectionner (long idCat) {
