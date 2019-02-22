@@ -111,18 +111,18 @@ public class ChallengeService extends IntentService {
 
         } else {
             int deuxiemeDefiIndex = -1;
-            int troisièmeDefiIndex = -1;
+            int troisiemeDefiIndex = -1;
             ArrayList<Defi> defisChoisis = new ArrayList<Defi>();
             int premierDefiIndex = (int)(Math.random() * listeModifiee.size());
             while (deuxiemeDefiIndex == premierDefiIndex || deuxiemeDefiIndex == -1) {
                 deuxiemeDefiIndex = (int)(Math.random() * listeModifiee.size());
             }
-            while (troisièmeDefiIndex == deuxiemeDefiIndex || troisièmeDefiIndex == premierDefiIndex || troisièmeDefiIndex == -1) {
-                troisièmeDefiIndex = (int)(Math.random() * listeModifiee.size());
+            while (troisiemeDefiIndex == deuxiemeDefiIndex || troisiemeDefiIndex == premierDefiIndex || troisiemeDefiIndex == -1) {
+                troisiemeDefiIndex = (int)(Math.random() * listeModifiee.size());
             }
             defisChoisis.add(listeModifiee.get(premierDefiIndex));
             defisChoisis.add(listeModifiee.get(deuxiemeDefiIndex));
-            defisChoisis.add(listeModifiee.get(troisièmeDefiIndex));
+            defisChoisis.add(listeModifiee.get(troisiemeDefiIndex));
 
             notifieNvxDefis(defisChoisis);
         }

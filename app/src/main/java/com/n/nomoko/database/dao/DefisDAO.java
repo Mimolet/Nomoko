@@ -71,4 +71,8 @@ public class DefisDAO extends DAOBase {
         c.close();
         return resultats;
     }
+
+    public void toutSupprimer () {
+        this.mDb.execSQL("DELETE FROM " + TABLE_NAME);
+    }
 }

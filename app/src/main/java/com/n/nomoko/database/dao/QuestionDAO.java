@@ -51,5 +51,9 @@ public class QuestionDAO extends DAOBase {
         c.close();
         return resultat;
     }
+
+    public void toutSupprimer () {
+        this.mDb.execSQL("DELETE FROM " + TABLE_NAME);
+    }
     
 }

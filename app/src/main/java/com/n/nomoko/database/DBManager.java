@@ -1,10 +1,12 @@
 package com.n.nomoko.database;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBManager extends SQLiteOpenHelper {
+    private Context context;
 
     /*TABLE CATEGORIE*/
 
@@ -75,6 +77,7 @@ public class DBManager extends SQLiteOpenHelper {
 
     public DBManager(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
+        this.context = context;
     }
 
     @Override
@@ -84,6 +87,11 @@ public class DBManager extends SQLiteOpenHelper {
         db.execSQL(DEFI_TABLE_CREATE);
         db.execSQL(TROPHEE_TABLE_CREATE);
         db.execSQL(RECOM_TABLE_CREATE);
+        /*Appel au service chargé de remplir la base de données*/
+        /*
+        Intent intent = new Intent(this.context, FillDBService.class);
+        this.context.startService(intent);
+        */
     }
 
     @Override
