@@ -20,7 +20,7 @@ public class QuestionDAO extends DAOBase {
     /*Ajout d'une question*/
     public void ajouter (Question q) {
         ContentValues valeur = new ContentValues();
-        valeur.put(QuestionDAO.TEXT, q.getTexte());
+        valeur.put(QuestionDAO.TEXT, q.getTexteID());
         valeur.put(QuestionDAO.CAT1, q.getIdCat1());
         valeur.put(QuestionDAO.CAT2, q.getIdCat2());
         this.mDb.insert(QuestionDAO.TABLE_NAME, null, valeur);
@@ -34,7 +34,7 @@ public class QuestionDAO extends DAOBase {
     /*Modification de la question*/
     public void modifierTexte (Question q) {
         ContentValues valeur = new ContentValues();
-        valeur.put(TEXT, q.getTexte());
+        valeur.put(TEXT, q.getTexteID());
         mDb.update(TABLE_NAME, valeur, KEY + " = ?", new String[] {String.valueOf(q.getIdQuest())});
     }
 
@@ -45,7 +45,7 @@ public class QuestionDAO extends DAOBase {
             c.close();
             return null;
         }
-        Question resultat = new Question(idQuest, c.getString(1), c.getLong(2), c.getLong(3));
+        Question resultat = new Question(idQuest, c.getInt(1), c.getLong(2), c.getLong(3));
         c.close();
         return resultat;
     }

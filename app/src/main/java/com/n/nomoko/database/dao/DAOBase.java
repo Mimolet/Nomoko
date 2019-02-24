@@ -8,7 +8,7 @@ import com.n.nomoko.database.DBManager;
 
 /*Cette classe sert de base pour créer des classes d'accès à la base de données.*/
 public abstract class DAOBase {
-    protected final static int VERSION = 6;
+    protected final static int VERSION = 7;
     protected final static String NOM = "database.db";
     protected SQLiteDatabase mDb = null;
     protected DBManager manager;

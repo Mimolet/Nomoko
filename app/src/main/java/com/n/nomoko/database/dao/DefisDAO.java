@@ -27,8 +27,8 @@ public class DefisDAO extends DAOBase {
 
     public void ajouter (Defi d) {
         ContentValues valeur = new ContentValues();
-        valeur.put(DefisDAO.NAME, d.getNomDefi());
-        valeur.put(DefisDAO.TEXT, d.getTxtDefi());
+        valeur.put(DefisDAO.NAME, d.getNomDefiID());
+        valeur.put(DefisDAO.TEXT, d.getTxtDefiID());
         valeur.put(DefisDAO.DUREE, d.getDureeDefi());
         valeur.put(DefisDAO.CAT, d.getCategorieDefi());
         valeur.put(DefisDAO.TRAIT, d.getTraitDefi());
@@ -44,7 +44,7 @@ public class DefisDAO extends DAOBase {
             c.close();
             return null;
         }
-        Defi resultat = new Defi(idDefi, c.getString(1), c.getString(2),
+        Defi resultat = new Defi(idDefi, c.getInt(1), c.getInt(2),
                 c.getInt(3), c.getString(4), c.getString(5),
                 c.getInt(6) == 1, c.getString(7), c.getInt(8));
         c.close();
@@ -58,12 +58,12 @@ public class DefisDAO extends DAOBase {
             c.close();
             return null;
         }
-        Defi resultat = new Defi(c.getLong(0), c.getString(1), c.getString(2),
+        Defi resultat = new Defi(c.getLong(0), c.getInt(1), c.getInt(2),
                 c.getInt(3), c.getString(4), c.getString(5),
                 c.getInt(6) == 1, c.getString(7), c.getInt(8));
         resultats.add(resultat);
         while(c.moveToNext()) {
-            resultat = new Defi(c.getLong(0), c.getString(1), c.getString(2),
+            resultat = new Defi(c.getLong(0), c.getInt(1), c.getInt(2),
                     c.getInt(3), c.getString(4), c.getString(5),
                     c.getInt(6) == 1, c.getString(7), c.getInt(8));
             resultats.add(resultat);

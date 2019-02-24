@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         QuestionDAO questionDAO = new QuestionDAO(this);
         questionDAO.open();
-        String text = questionDAO.selectionner(5).getTexte();
+        String text = getString(questionDAO.selectionner(20).getTexteID());
         questionDAO.close();
         TextView textView = findViewById(R.id.hey);
         textView.setText(text);

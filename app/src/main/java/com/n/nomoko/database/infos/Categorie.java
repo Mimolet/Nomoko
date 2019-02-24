@@ -2,13 +2,13 @@ package com.n.nomoko.database.infos;
 
 public class Categorie {
     private long idCat;
-    private String nomCat;
+    private int nomCatID;
     private String signeCat;
 
 
-    public Categorie(long idCat, String nomCat, String signeCat) {
+    public Categorie(long idCat, int nomCatID, String signeCat) {
         this.idCat = idCat;
-        this.nomCat = nomCat;
+        this.nomCatID = nomCatID;
         this.signeCat = signeCat;
     }
 
@@ -21,12 +21,12 @@ public class Categorie {
         this.idCat = idCat;
     }
 
-    public String getNomCat() {
-        return nomCat;
+    public int getNomCatID() {
+        return nomCatID;
     }
 
-    public void setNomCat(String nomCat) {
-        this.nomCat = nomCat;
+    public void setNomCatID(int nomCatID) {
+        this.nomCatID = nomCatID;
     }
 
     public String getSigneCat() {

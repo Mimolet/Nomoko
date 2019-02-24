@@ -18,7 +18,7 @@ public class CategorieDAO extends DAOBase {
 
     public long ajouter (Categorie cat) {
         ContentValues valeur = new ContentValues();
-        valeur.put(CategorieDAO.NAME, cat.getNomCat());
+        valeur.put(CategorieDAO.NAME, cat.getNomCatID());
         valeur.put(CategorieDAO.SIGNE, cat.getSigneCat());
         return this.mDb.insert(QuestionDAO.TABLE_NAME, null, valeur);
     }
@@ -29,7 +29,7 @@ public class CategorieDAO extends DAOBase {
             c.close();
             return null;
         }
-        Categorie resultat = new Categorie(idCat, c.getString(1), c.getString(2));
+        Categorie resultat = new Categorie(idCat, c.getInt(1), c.getString(2));
         c.close();
         return resultat;
     }

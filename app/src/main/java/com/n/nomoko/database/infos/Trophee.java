@@ -2,15 +2,15 @@ package com.n.nomoko.database.infos;
 
 public class Trophee {
     private long idTrophee;
-    private String nomTro;
-    private String txtTro;
+    private int nomTroID;
+    private int txtTroID;
     private boolean obtenuTro;
     private String illustrationPathTro;
 
-    public Trophee(long idTrophee, String nomTro, String txtTro, boolean obtenuTro, String illustrationPathTro) {
+    public Trophee(long idTrophee, int nomTroID, int txtTroID, boolean obtenuTro, String illustrationPathTro) {
         this.idTrophee = idTrophee;
-        this.nomTro = nomTro;
-        this.txtTro = txtTro;
+        this.nomTroID = nomTroID;
+        this.txtTroID = txtTroID;
         this.obtenuTro = obtenuTro;
         this.illustrationPathTro = illustrationPathTro;
     }
@@ -24,20 +24,20 @@ public class Trophee {
         this.idTrophee = idTrophee;
     }
 
-    public String getNomTro() {
-        return nomTro;
+    public int getNomTroID() {
+        return nomTroID;
     }
 
-    public void setNomTro(String nomTro) {
-        this.nomTro = nomTro;
+    public void setNomTroID(int nomTroID) {
+        this.nomTroID = nomTroID;
     }
 
-    public String getTxtTro() {
-        return txtTro;
+    public int getTxtTroID() {
+        return txtTroID;
     }
 
-    public void setTxtTro(String txtTro) {
-        this.txtTro = txtTro;
+    public void setTxtTroID(int txtTroID) {
+        this.txtTroID = txtTroID;
     }
 
     public boolean isObtenuTro() {

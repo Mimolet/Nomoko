@@ -2,8 +2,8 @@ package com.n.nomoko.database.infos;
 
 public class Defi {
     private long idDefi;
-    private String nomDefi;
-    private String txtDefi;
+    private int nomDefiID;
+    private int txtDefiID;
     private int dureeDefi;
     private String categorieDefi;
     private String traitDefi;
@@ -11,10 +11,10 @@ public class Defi {
     private String illustrationPathDefi;
     private int difficulte;
 
-    public Defi(long idDefi, String nomDefi, String txtDefi, int dureeDefi, String categorieDefi, String traitDefi, boolean reussiDefi, String illustrationPathDefi, int difficulte) {
+    public Defi(long idDefi, int nomDefi, int txtDefiID, int dureeDefi, String categorieDefi, String traitDefi, boolean reussiDefi, String illustrationPathDefi, int difficulte) {
         this.idDefi = idDefi;
-        this.nomDefi = nomDefi;
-        this.txtDefi = txtDefi;
+        this.nomDefiID = nomDefi;
+        this.txtDefiID = txtDefiID;
         this.dureeDefi = dureeDefi;
         this.categorieDefi = categorieDefi;
         this.traitDefi = traitDefi;
@@ -32,20 +32,20 @@ public class Defi {
         this.idDefi = idDefi;
     }
 
-    public String getNomDefi() {
-        return nomDefi;
+    public int getNomDefiID() {
+        return nomDefiID;
     }
 
-    public void setNomDefi(String nomDefi) {
-        this.nomDefi = nomDefi;
+    public void setNomDefiID(int nomDefiID) {
+        this.nomDefiID = nomDefiID;
     }
 
-    public String getTxtDefi() {
-        return txtDefi;
+    public int getTxtDefiID() {
+        return txtDefiID;
     }
 
-    public void setTxtDefi(String txtDefi) {
-        this.txtDefi = txtDefi;
+    public void setTxtDefiID(int txtDefiID) {
+        this.txtDefiID = txtDefiID;
     }
 
     public int getDureeDefi() {

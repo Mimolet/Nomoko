@@ -20,8 +20,8 @@ public class TropheesDAO extends DAOBase {
 
     public void ajouter (Trophee t) {
         ContentValues valeur = new ContentValues();
-        valeur.put(TropheesDAO.NAME, t.getNomTro());
-        valeur.put(TropheesDAO.TEXT, t.getTxtTro());
+        valeur.put(TropheesDAO.NAME, t.getNomTroID());
+        valeur.put(TropheesDAO.TEXT, t.getTxtTroID());
         valeur.put(TropheesDAO.OBTENU, t.isObtenuTro());
         valeur.put(TropheesDAO.ILLU_PATH, t.getIllustrationPathTro());
         this.mDb.insert(TropheesDAO.TABLE_NAME, null, valeur);
@@ -33,7 +33,7 @@ public class TropheesDAO extends DAOBase {
             c.close();
             return null;
         }
-        Trophee resultat = new Trophee(idTrophee, c.getString(1), c.getString(2), c.getInt(3) == 1, c.getString(4));
+        Trophee resultat = new Trophee(idTrophee, c.getInt(1), c.getInt(2), c.getInt(3) == 1, c.getString(4));
         c.close();
         return resultat;
     }
