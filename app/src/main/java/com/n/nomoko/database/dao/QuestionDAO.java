@@ -13,8 +13,6 @@ public class QuestionDAO extends DAOBase {
     public static final String CAT1 = "idCat1";
     public static final String CAT2 = "idCat2";
 
-    public static final String TABLE_DROP = "DROP TABLE IF EXISTS " + TABLE_NAME + ";";
-
     public QuestionDAO(Context pContext) {
         super(pContext);
     }
