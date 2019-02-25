@@ -88,52 +88,52 @@ public class FormManager {
         String type = this.Esprit + this.Energie + this.Nature +this.Tactique;
         switch (type) {
             case "INTJ":
-                this.personnalite = "Architecte";
+                this.personnalite = "Analyste";
                 break;
             case "INTP":
-                this.personnalite = "Logicien";
+                this.personnalite = "Analyste";
                 break;
             case "ENTJ":
-                this.personnalite = "Commandant";
+                this.personnalite = "Analyste";
                 break;
             case "ENTP":
-                this.personnalite = "Innovateur";
+                this.personnalite = "Analyste";
                 break;
             case "INFJ":
-                this.personnalite = "Avocat";
+                this.personnalite = "Diplomate";
                 break;
             case "INFP":
-                this.personnalite = "Médiateur";
+                this.personnalite = "Diplomate";
                 break;
             case "ENFJ":
-                this.personnalite = "Protagoniste";
+                this.personnalite = "Diplomate";
                 break;
             case "ENFP":
-                this.personnalite = "Inspirateur";
+                this.personnalite = "Diplomate";
                 break;
             case "ISTJ":
-                this.personnalite = "Logisticien";
+                this.personnalite = "Sentinelle";
                 break;
             case "ISFJ":
-                this.personnalite = "Défenseur";
+                this.personnalite = "Sentinelle";
                 break;
             case "ESTJ":
-                this.personnalite = "Directeur";
+                this.personnalite = "Sentinelle";
                 break;
             case "ESFJ":
-                this.personnalite = "Consul";
+                this.personnalite = "Sentinelle";
                 break;
             case "ISTP":
-                this.personnalite = "Virtuose";
+                this.personnalite = "Explorateur";
                 break;
             case "ISFP":
-                this.personnalite = "Aventurier";
+                this.personnalite = "Explorateur";
                 break;
             case "ESTP":
-                this.personnalite = "Entrepreneur";
+                this.personnalite = "Explorateur";
                 break;
             case "ESFP":
-                this.personnalite = "Amuseur";
+                this.personnalite = "Explorateur";
                 break;
         }
     }
@@ -206,5 +206,9 @@ public class FormManager {
             System.out.println("Erreur : catégorie inconnue.");
             return null;
         }
+    }
+
+    public String getPersonnalite() {
+        return personnalite;
     }
 }

@@ -22,6 +22,10 @@
     <string name="editext_recompense">Créez votre récompense</string>
     <string name="bouton_suivant">Suivant</string>
     <string name="test_de_personnalite">Test de personnalité</string>
+    <string name="personnaliteAnalyste">Analyste</string>
+    <string name="personnaliteDiplomate">Diplomate</string>
+    <string name="personnaliteSentinelle">Sentinelle</string>
+    <string name="personnaliteExplorateur">Explorateur</string>
     <!-- Base de données -->
     <!-- Catégories -->
     <string name="dbCatEsprit">Esprit</string>
@@ -66,8 +70,8 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbQuest32">Vous prenez souvent l\’initiative dans les situations sociales.</string>
 
     <!-- Defis -->
-        <!-- Noms -->
-            <!-- Introverti -->
+    <!-- Noms -->
+    <!-- Introverti -->
     <string name="dbDefiNom1">Sobriété</string>
     <string name="dbDefiNom2">Homo ludens</string>
     <string name="dbDefiNom3">Quoi de mieux que sa famille ?</string>
@@ -78,7 +82,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefiNom8">Introspection</string>
     <string name="dbDefiNom9">Ghost</string>
     <string name="dbDefiNom10">Fin de semaine tranquille</string>
-            <!-- Extraverti -->
+    <!-- Extraverti -->
     <string name="dbDefiNom11">Ca va swinger !</string>
     <string name="dbDefiNom12">Le ridicule ne tue pas</string>
     <string name="dbDefiNom13">Conversation impromptue</string>
@@ -89,7 +93,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefiNom18">La La Land</string>
     <string name="dbDefiNom19">Cher journal</string>
     <string name="dbDefiNom20">Sociable</string>
-            <!-- Observateur -->
+    <!-- Observateur -->
     <string name="dbDefiNom21">Quittez ce monde !</string>
     <string name="dbDefiNom22">On se déconnecte !</string>
     <string name="dbDefiNom23">Mortels emballages</string>
@@ -100,7 +104,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefiNom28">Marco ? Polo !</string>
     <string name="dbDefiNom29">Le minimum vital</string>
     <string name="dbDefiNom30">Dans 20, 30 ans y en aura plus</string>
-            <!-- Intuitif -->
+    <!-- Intuitif -->
     <string name="dbDefiNom31">Into the wild</string>
     <string name="dbDefiNom32">Fiction</string>
     <string name="dbDefiNom33">J\'ai mal à la tête</string>
@@ -111,7 +115,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefiNom38">Suivez le guide !</string>
     <string name="dbDefiNom39">Ami des animaux</string>
     <string name="dbDefiNom40">Une intuition, vous dites ?</string>
-            <!-- Pensee -->
+    <!-- Pensee -->
     <string name="dbDefiNom41">Schtroumpf grognon</string>
     <string name="dbDefiNom42">Poli</string>
     <string name="dbDefiNom43">Sans rancune</string>
@@ -122,7 +126,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefiNom48">Inventaire des relations</string>
     <string name="dbDefiNom49">Bouddha</string>
     <string name="dbDefiNom50">Fact checker</string>
-            <!-- Sentiment -->
+    <!-- Sentiment -->
     <string name="dbDefiNom51">L\'amitié c\'est important</string>
     <string name="dbDefiNom52">Le monde a besoin de vous !</string>
     <string name="dbDefiNom53">Souriez, vous êtes filmé !</string>
@@ -133,7 +137,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefiNom58">Chacun son histoire</string>
     <string name="dbDefiNom59">Ne tournez plus autour du pot</string>
     <string name="dbDefiNom60">Vulnérable</string>
-            <!-- Organise -->
+    <!-- Organise -->
     <string name="dbDefiNom61">C\'est l\'heure du tri</string>
     <string name="dbDefiNom62">Trop c\'est trop !</string>
     <string name="dbDefiNom63">3, 2, 1, Go !</string>
@@ -144,7 +148,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefiNom68">Maître Shifu</string>
     <string name="dbDefiNom69">Plannification</string>
     <string name="dbDefiNom70">Comptable</string>
-            <!-- Opportuniste -->
+    <!-- Opportuniste -->
     <string name="dbDefiNom71">L\'aventure m\'appelle</string>
     <string name="dbDefiNom72">Du changement, ça fait du bien !</string>
     <string name="dbDefiNom73">Polyglotte</string>
@@ -155,8 +159,8 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefiNom78">Ca fait du bien !</string>
     <string name="dbDefiNom79">De bonnes affaires !</string>
     <string name="dbDefiNom80">L\'art de négocier</string>
-        <!-- Texte -->
-            <!-- Introverti -->
+    <!-- Texte -->
+    <!-- Introverti -->
     <string name="dbDefi1">L\'alcool c\'est fini pendant 7 jours.</string>
     <string name="dbDefi2">Ce soir, c\'est jeu de société en petit comité ! </string>
     <string name="dbDefi3">Passez du temps avec votre famille.</string>
@@ -167,7 +171,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefi8">Cette semaine, couchez à l\'écrit vos ressentis, vos doutes, vos envies.</string>
     <string name="dbDefi9">N\'envoyez aucun message électronique pendant 2 jours.</string>
     <string name="dbDefi10">Passez un week-end seul.</string>
-            <!-- Extraverti -->
+    <!-- Extraverti -->
     <string name="dbDefi11">Organisez une soirée chez vous.</string>
     <string name="dbDefi12">Promenez-vous dans la rue avec un accessoire atypique.</string>
     <string name="dbDefi13">Engagez une discussion avec un inconnnu pendant au moins 10 minutes.</string>
@@ -178,7 +182,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefi18">Écoutez une de vos musiques favorites et dansez dans la rue.</string>
     <string name="dbDefi19">Publiez un message personnel sur votre réseau social favori.</string>
     <string name="dbDefi20">Dès que possible, passez du temps avec vos collègues, et ce pendant 3 jours.</string>
-            <!-- Observateur -->
+    <!-- Observateur -->
     <string name="dbDefi21">Ne vous renseignez plus sur l\'actualité pendant 7 jours.</string>
     <string name="dbDefi22">Coupez-vous des réseaux sociaux pendant 3 jours.</string>
     <string name="dbDefi23">Limitez les déchets non-recyclables dans votre foyer à un sac poubelle par personne, sur une semaine.</string>
@@ -189,7 +193,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefi28">Perdez-vous intentionnellement et essayez de retrouver votre chemin avec une carte.</string>
     <string name="dbDefi29">N\'achetez rien de superflu cette semaine, uniquement le strict nécessaire.</string>
     <string name="dbDefi30">Votre seule boisson pendant 3 jours, c\'est de l\'eau ! Pas de thé, pas de café !</string>
-            <!-- Intuitif -->
+    <!-- Intuitif -->
     <string name="dbDefi31">Prenez votre sac et partez en randonnée.</string>
     <string name="dbDefi32">Écrivez quelques pages sur ce que pourrait être votre vie si vous étiez quelqu\'un de complètement différent, vivant ailleurs sur la planète.</string>
     <string name="dbDefi33">Questionnez votre place dans ce monde. Pourquoi êtes-vous ce que vous êtes ? Pourquoi êtes-vous là ?</string>
@@ -200,7 +204,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefi38">Rendez-vous dans un musée d\'art et suivez une visite guidée.</string>
     <string name="dbDefi39">Mangez végétarien pendant 3 jours.</string>
     <string name="dbDefi40">Jetez-vous habillé dans une fontaine.</string>
-            <!-- Pensee -->
+    <!-- Pensee -->
     <string name="dbDefi41">Ne pas râler durant les 3 prochains jours.</string>
     <string name="dbDefi42">Dites merci aussi souvent que vous le pouvez.</string>
     <string name="dbDefi43">Pardonnez à quelqu\'un qui vous a fait du mal par le passé.</string>
@@ -211,7 +215,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefi48">Faites la liste de ce qui vous plaît et vous déplaît chez vos amis proches, pour chacun d\'eux.</string>
     <string name="dbDefi49">Contenez votre colère et votre frustration pendant 3 jours. Respirez profondément !</string>
     <string name="dbDefi50">Renseignez-vous sur un problème d\'actualité que vous connaissez peu ou mal.</string>
-            <!-- Sentiment -->
+    <!-- Sentiment -->
     <string name="dbDefi51">Faites savoir à un ami proche qu\'il compte beaucoup pour vous</string>
     <string name="dbDefi52">Inscrivez-vous dans une association humanitaire.</string>
     <string name="dbDefi53">Souriez quand quelqu\'un vous parle.</string>
@@ -222,7 +226,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefi58">Invitez un sans-abri à mnger et écoutez son histoire.</string>
     <string name="dbDefi59">Ajourd\'hui, soyez franc avec votre entourage.</string>
     <string name="dbDefi60">Dites à quelqu\'un ce qui vous effraie le plus </string>
-            <!-- Organise -->
+    <!-- Organise -->
     <string name="dbDefi61">Prenez un sac poubelle et jetez vos anciennes affaires inutilisées, ou donnez-les.</string>
     <string name="dbDefi62">Triez vos contacts Facebook ainsi que vos abonnements YouTube et Twitter.</string>
     <string name="dbDefi63">Arrivez 10 minutes en avance au travail pendant une semaine.</string>
@@ -233,7 +237,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefi68">Devenez le mentor de quelqu\'un dans votre entourage.</string>
     <string name="dbDefi69">Établissez un planning détaillé pour la semaine à venir.</string>
     <string name="dbDefi70">Tenez précisément vos comptes pendant une semaine.</string>
-            <!-- Opportuniste -->
+    <!-- Opportuniste -->
     <string name="dbDefi71">Prenez un billet de train au dernier moment.</string>
     <string name="dbDefi72">Ne prenez pas le chemin habituel pour aller au travail.</string>
     <string name="dbDefi73">Apprenez les rudiments d\'une langue de votre choix jusqu\'à être capable de vous présenter dans cette langue.</string>
@@ -246,7 +250,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbDefi80">Marchandez 10% sur votre prochain achat auprès d\'un particulier.</string>
 
     <!-- Trophees -->
-        <!-- Nom -->
+    <!-- Nom -->
     <string name="dbTroNom1">Avatar</string>
     <string name="dbTroNom2">Notifications</string>
     <string name="dbTroNom3">Utilisateur intéressé</string>
@@ -262,7 +266,7 @@ par les autres que d’être puissant(e)."</string>
     <string name="dbTroNom13">Utilisateur assidu</string>
     <string name="dbTroNom14">L\'aventure commence !</string>
     <string name="dbTroNom15">Au-delà de la zone de confort</string>
-        <!-- Texte -->
+    <!-- Texte -->
     <string name="dbTro1">Choisir un avatar</string>
     <string name="dbTro2">Activer les notifications.</string>
     <string name="dbTro3">Utliser l\'application pendant 7 jours.</string>

@@ -21,7 +21,7 @@ public class DBManager extends SQLiteOpenHelper {
     public static final String CATEGORIE_KEY = "idCat";
     public static final String CATEGORIE_NAME = "nomCat";
     public static final String CATEGORIE_SIGNE = "signeCat";
-    public static final String CATEGORIE_TABLE_NAME = "Catégorie";
+    public static final String CATEGORIE_TABLE_NAME = "Categorie";
     public static final String CATEGORIE_TABLE_CREATE = "CREATE TABLE " + CATEGORIE_TABLE_NAME +
             " (" + CATEGORIE_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, " + CATEGORIE_NAME + " INTEGER, " +
             CATEGORIE_SIGNE + " TEXT);";

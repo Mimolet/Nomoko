@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.ResultatTestActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/profil"
+            />
+
+        <TextView
+            android:id="@+id/personnaliteUser"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="personnaliteUser"
+            android:textSize="14dp"
+            android:textColor="#FF002D40"
+            android:width="141dp"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF002D40"
+            android:text="ESPRIT"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:height="21dp"
+            android:width="165dp"
+            android:textSize="14dp"
+            android:lineHeight="22sp"
+            />
+
+        <SeekBar
+            android:id="@+id/espritBarre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="20dp"
+            android:minHeight="20dp"
+            android:thumbOffset="8dp"
+            android:background="@drawable/seekbarbg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ENERGIE"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#FF002D40"
+            android:textSize="14dp"
+            android:lineHeight="22sp"
+            />
+        <SeekBar
+            android:id="@+id/energieBarre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="20dp"
+            android:minHeight="20dp"
+            android:thumbOffset="8dp"
+            android:background="@drawable/seekbarbg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NATURE"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#FF002D40"
+            android:textSize="14dp"
+            android:lineHeight="22sp"
+            />
+        <SeekBar
+            android:id="@+id/natureBarre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="20dp"
+            android:minHeight="20dp"
+            android:thumbOffset="8dp"
+            android:background="@drawable/seekbarbg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TACTIQUE"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#FF002D40"
+            android:textSize="14dp"
+            android:lineHeight="22sp"
+            />
+        <SeekBar
+            android:id="@+id/tactiqueBarre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="20dp"
+            android:minHeight="20dp"
+            android:thumbOffset="8dp"
+            android:background="@drawable/seekbarbg"
+            />
+
+        <Button
+            android:id="@+id/boutonVersAccueil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_result_bg"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Accéder aux premiers défis"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
