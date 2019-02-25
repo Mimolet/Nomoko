@@ -30,7 +30,8 @@ public class BienvenueActivity extends AppCompatActivity implements SurfaceHolde
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bienvenue);
-
+        /*TODO : ajouter un bouton pour passer la vidéo*/
+        /*TODO : ajouter un bouton pour couper le son*/
 
         final SharedPreferences infoPerso = PreferenceManager.getDefaultSharedPreferences(this);
         //Pour démarrer la page d'inscription après la vidéo de bienvenue

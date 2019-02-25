@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -65,5 +66,26 @@ public class ResultatTestActivity extends AppCompatActivity {
         SeekBar seekBarEnergie = findViewById(R.id.energieBarre);
         SeekBar seekBarNature = findViewById(R.id.natureBarre);
         SeekBar seekBarTactique = findViewById(R.id.tactiqueBarre);
+
+        ImageView imageView = findViewById(R.id.imagePersonnalite);
+        /*TODO: importer les images des personnalité en svg*/
+
+        switch (personnalite) {
+            case "Analyste" :
+                imageView.setImageDrawable(getDrawable(R.drawable.analystemdpi));
+                break;
+
+            case "Sentinelle" :
+                imageView.setImageDrawable(getDrawable(R.drawable.sentinellemdpi));
+                break;
+
+            case "Diplomate" :
+                imageView.setImageDrawable(getDrawable(R.drawable.diplomatemdpi));
+                break;
+
+            case "Explorateur" :
+                imageView.setImageDrawable(getDrawable(R.drawable.explorateurmdpi));
+                break;
+        }
     }
 }
