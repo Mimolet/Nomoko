@@ -38,6 +38,12 @@ public class TropheesDAO extends DAOBase {
         return resultat;
     }
 
+    public void validerTrophee (long id) {
+        ContentValues value = new ContentValues();
+        value.put(OBTENU, true);
+        mDb.update(TABLE_NAME, value, KEY + " = ?", new String[]{String.valueOf(id)});
+    }
+
     public void toutSupprimer () {
         this.mDb.execSQL("DELETE FROM " + TABLE_NAME);
     }

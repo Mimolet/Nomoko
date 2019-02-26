@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF7FBFC"
     tools:context=".views.ResultatTestActivity">
 
     <LinearLayout
@@ -13,118 +14,167 @@
 
         <ImageView
             android:id="@+id/imagePersonnalite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="141dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginEnd="109dp"
+            android:layout_marginTop="99dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/profil"
+            android:src="@drawable/profil" />
+
+        <TextView
+            android:text="Vous êtes un"
+            android:gravity="center"
+            android:layout_width="165dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="98dp"
+            android:layout_marginEnd="97dp"
+            tools:fontFamily="@font/montserrat"
             />
 
         <TextView
             android:id="@+id/personnaliteUser"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="202dp"
+            android:layout_height="29dp"
             android:gravity="center"
-            android:text="personnaliteUser"
-            android:textSize="14dp"
+            android:text="personnalite"
+            android:textSize="24dp"
             android:textColor="#FF002D40"
-            android:width="141dp"
+            tools:fontFamily="@font/montserrat"
+            android:layout_marginStart="79dp"
+            android:layout_marginEnd="79dp"
             />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textColor="#FF002D40"
-            android:text="ESPRIT"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:height="21dp"
             android:width="165dp"
-            android:textSize="14dp"
+            android:height="21dp"
+            android:gravity="center"
             android:lineHeight="22sp"
-            />
+            android:text="ESPRIT"
+            android:textColor="#FF002D40"
+            android:textSize="14dp"
+            tools:fontFamily="@font/montserrat_bold"
+            tools:layout_marginBottom="25dp"
+            tools:layout_marginTop="25dp" />
 
-        <SeekBar
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="240dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="right"
+            android:width="79.57dp"
+            android:height="15dp"
+            android:lineHeight="15sp"
+            android:lineSpacingMultiplier="1.25"
+            android:text="Extraverti"
+            android:textColor="@color/texteGris"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="79dp"
+            android:layout_height="15dp"
+            android:width="79.57dp"
+            android:height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="240dp"
+            android:gravity="left"
+            android:lineHeight="15sp"
+            android:lineSpacingMultiplier="1.25"
+            android:text="Introverti"
+            android:textColor="@color/texteGris"
+            android:textStyle="normal" />
+
+
+        <ProgressBar
             android:id="@+id/espritBarre"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxHeight="20dp"
-            android:minHeight="20dp"
-            android:thumbOffset="8dp"
-            android:background="@drawable/seekbarbg"
-            />
+            android:background="@drawable/progressbarbg"
+            android:maxHeight="220dp"
+            tools:paddingBottom="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lineHeight="22sp"
             android:text="ENERGIE"
-            android:layout_gravity="center"
-            android:gravity="center"
             android:textColor="#FF002D40"
             android:textSize="14dp"
-            android:lineHeight="22sp"
-            />
-        <SeekBar
+            tools:fontFamily="@font/montserrat_bold"
+            tools:layout_marginBottom="25dp"
+            tools:layout_marginTop="25dp" />
+
+        <ProgressBar
             android:id="@+id/energieBarre"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxHeight="20dp"
-            android:minHeight="20dp"
-            android:thumbOffset="8dp"
-            android:background="@drawable/seekbarbg"
-            />
+            android:background="@drawable/progressbarbg"
+            tools:paddingBottom="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:lineHeight="22sp"
             android:text="NATURE"
-            android:layout_gravity="center"
-            android:gravity="center"
             android:textColor="#FF002D40"
             android:textSize="14dp"
-            android:lineHeight="22sp"
-            />
-        <SeekBar
+            tools:fontFamily="@font/montserrat_bold"
+            tools:layout_marginBottom="25dp" />
+
+        <ProgressBar
             android:id="@+id/natureBarre"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxHeight="20dp"
-            android:minHeight="20dp"
-            android:thumbOffset="8dp"
-            android:background="@drawable/seekbarbg"
-            />
+            android:background="@drawable/progressbarbg"
+            tools:paddingBottom="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TACTIQUE"
             android:layout_gravity="center"
             android:gravity="center"
+            android:lineHeight="22sp"
+            android:text="TACTIQUE"
             android:textColor="#FF002D40"
             android:textSize="14dp"
-            android:lineHeight="22sp"
-            />
-        <SeekBar
+            tools:fontFamily="@font/montserrat_bold"
+            tools:layout_marginBottom="25dp"
+            tools:layout_marginTop="25dp" />
+
+        <ProgressBar
             android:id="@+id/tactiqueBarre"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxHeight="20dp"
-            android:minHeight="20dp"
-            android:thumbOffset="8dp"
-            android:background="@drawable/seekbarbg"
-            />
+            android:background="@drawable/progressbarbg"
+            tools:paddingBottom="10dp" />
 
         <Button
             android:id="@+id/boutonVersAccueil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_result_bg"
             android:layout_gravity="center"
+            android:background="@drawable/btn_result_bg"
             android:gravity="center"
             android:text="Accéder aux premiers défis"
             android:textColor="#FFFFFFFF"
             android:textSize="14sp"
             android:textStyle="bold"
-            />
+            tools:layout_marginTop="25dp" />
 
     </LinearLayout>
 

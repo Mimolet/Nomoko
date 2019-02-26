@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -62,29 +63,34 @@ public class ResultatTestActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.personnaliteUser);
         textView.setText(personnalite);
 
-        SeekBar seekBarEsprit = findViewById(R.id.espritBarre);
-        SeekBar seekBarEnergie = findViewById(R.id.energieBarre);
-        SeekBar seekBarNature = findViewById(R.id.natureBarre);
-        SeekBar seekBarTactique = findViewById(R.id.tactiqueBarre);
+        ProgressBar BarEsprit = findViewById(R.id.espritBarre);
+        ProgressBar BarEnergie = findViewById(R.id.energieBarre);
+        ProgressBar BarNature = findViewById(R.id.natureBarre);
+        ProgressBar BarTactique = findViewById(R.id.tactiqueBarre);
+
+        BarEsprit.setProgress(espritPourcent);
+        BarEnergie.setProgress(energiePourcent);
+        BarNature.setProgress(naturePourcent);
+        BarTactique.setProgress(tactiquePourcent);
 
         ImageView imageView = findViewById(R.id.imagePersonnalite);
         /*TODO: importer les images des personnalité en svg*/
 
         switch (personnalite) {
             case "Analyste" :
-                imageView.setImageDrawable(getDrawable(R.drawable.analystemdpi));
+                imageView.setImageDrawable(getDrawable(R.drawable.analyste));
                 break;
 
             case "Sentinelle" :
-                imageView.setImageDrawable(getDrawable(R.drawable.sentinellemdpi));
+                imageView.setImageDrawable(getDrawable(R.drawable.sentinelle));
                 break;
 
             case "Diplomate" :
-                imageView.setImageDrawable(getDrawable(R.drawable.diplomatemdpi));
+                imageView.setImageDrawable(getDrawable(R.drawable.diplomate));
                 break;
 
             case "Explorateur" :
-                imageView.setImageDrawable(getDrawable(R.drawable.explorateurmdpi));
+                imageView.setImageDrawable(getDrawable(R.drawable.explorateur));
                 break;
         }
     }

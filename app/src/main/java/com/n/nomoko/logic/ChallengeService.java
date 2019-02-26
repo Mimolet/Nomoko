@@ -32,6 +32,8 @@ public class ChallengeService extends IntentService {
     private String esprit;
     private String nature;
     private String tactique;
+    /*Notifications activees ou non*/
+    private boolean notif;
     /*Nom de la channel utilisée pour envoyer une notification à l'user (pour android 8,0 et sup)*/
     private static final String CHANNEL_ID = "Notif_Nomoko";
 
@@ -39,12 +41,12 @@ public class ChallengeService extends IntentService {
         super("ChallengeService");
         //permet de récupérer des infos stockées en local
         SharedPreferences infoPerso = PreferenceManager.getDefaultSharedPreferences(this);
-        /*TODO : gérer le cas de defValue*/
-        this.experience = infoPerso.getInt("experience", -1);
-        /*TODO : idem*/
-        this.niveau = infoPerso.getInt("niveau", -1);
-        /*TODO ; idem*/
-        this.palierExp = infoPerso.getInt("palierExp", -1);
+
+        this.experience = infoPerso.getInt("experience", 0);
+
+        this.niveau = infoPerso.getInt("niveau", 1);
+
+        this.palierExp = infoPerso.getInt("palierExp", 100);
 
         this.energie = infoPerso.getString("energie", "");
 
@@ -53,6 +55,8 @@ public class ChallengeService extends IntentService {
         this.nature = infoPerso.getString("nature", "");
 
         this.tactique = infoPerso.getString("tactique", "");
+
+        this.notif = infoPerso.getBoolean("notifications", true);
     }
 
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -67,7 +71,11 @@ public class ChallengeService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-
+        //validation defi
+        long idDefi = intent.getLongExtra("idDefi", 0);
+        validerDefi(idDefi);
+        this.experience += 10;
+        gestionExperience();
     }
 
     private void gestionExperience () {
@@ -124,7 +132,12 @@ public class ChallengeService extends IntentService {
             defisChoisis.add(listeModifiee.get(deuxiemeDefiIndex));
             defisChoisis.add(listeModifiee.get(troisiemeDefiIndex));
 
-            notifieNvxDefis(defisChoisis);
+            if (notif) {
+                notifieNvxDefis(defisChoisis);
+            } else {
+                // TODO : inscription dans les shared pref les id des nouveaux défs. Verif dans accueil
+            }
+
         }
     }
 
@@ -185,7 +198,20 @@ public class ChallengeService extends IntentService {
             notificationManager.createNotificationChannel(channel);
         }
     }
+
+    private void validerDefi (long id) {
+        DefisDAO defisDAO = new DefisDAO(this);
+        defisDAO.open();
+        defisDAO.validerDefi(id);
+        defisDAO.close();
+    }
+
+    private void validerTrophee () {
+        /*Vérifie si un trophee a été valide*/
+    }
 }
+
+
 
 
 

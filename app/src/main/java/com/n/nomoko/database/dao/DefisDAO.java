@@ -72,6 +72,12 @@ public class DefisDAO extends DAOBase {
         return resultats;
     }
 
+    public void validerDefi (long id) {
+        ContentValues value = new ContentValues();
+        value.put(REUSSI, true);
+        mDb.update(TABLE_NAME, value, KEY + " = ?", new String[]{String.valueOf(id)});
+    }
+
     public void toutSupprimer () {
         this.mDb.execSQL("DELETE FROM " + TABLE_NAME);
     }

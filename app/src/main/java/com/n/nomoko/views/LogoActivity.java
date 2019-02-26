@@ -1,10 +1,12 @@
 package com.n.nomoko.views;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.SurfaceHolder;
@@ -31,12 +33,18 @@ public class LogoActivity extends AppCompatActivity implements SurfaceHolder.Cal
         categorieDAO.open();
         categorieDAO.close();
 
+        final SharedPreferences infoPerso = PreferenceManager.getDefaultSharedPreferences(this);
+
         //Pour démarrer automatiquement cette activité après celle du logo
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
-                Intent intent = new Intent(LogoActivity.this, BienvenueActivity.class);
+                Intent intent;
+                if (infoPerso.contains("testFini")) {
+                    intent = new Intent(LogoActivity.this, AccueilActivity.class);
+                } else {
+                    intent = new Intent(LogoActivity.this, BienvenueActivity.class);
+                }
                 startActivity(intent);
             }
         }, 6000);

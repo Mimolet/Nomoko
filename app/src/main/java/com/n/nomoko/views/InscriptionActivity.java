@@ -12,6 +12,7 @@ import android.widget.EditText;
 import com.n.nomoko.*;
 
 public class InscriptionActivity extends AppCompatActivity {
+    private final int palierExperience = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,8 @@ public class InscriptionActivity extends AppCompatActivity {
         editeur.putString("prenom", String.valueOf(editText.getText()));
         editeur.putInt("niveau", 1);
         editeur.putInt("experience", 0);
+        editeur.putInt("palierExp", palierExperience);
+        editeur.putBoolean("notifications", true);
         editeur.apply();
     }
 }

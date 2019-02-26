@@ -26,6 +26,7 @@
     <string name="personnaliteDiplomate">Diplomate</string>
     <string name="personnaliteSentinelle">Sentinelle</string>
     <string name="personnaliteExplorateur">Explorateur</string>
+    <string name="notifparam">Activer/désactiver les notifications.</string>
     <!-- Base de données -->
     <!-- Catégories -->
     <string name="dbCatEsprit">Esprit</string>

@@ -6,4 +6,6 @@
     <color name="barredetat">#FF000000</color>
     <color name="itemactif">#FFFF414D</color>
     <color name="iteminactif">#FFFFC5C7</color>
+    <color name="rad_button">#FF002D40</color>
+    <color name="texteGris">#FF36677C</color>
 </resources>
