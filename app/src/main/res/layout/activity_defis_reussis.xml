@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF7FBFC"
+    tools:context=".views.DefisReussisActivity">
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginRight="62dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="69dp"
+        android:width="235dp"
+        android:height="22dp"
+        android:gravity="center"
+        android:lineHeight="22sp"
+        android:text="Mes défis réussis"
+        android:textAlignment="center"
+        android:textColor="#FF002D40"
+        android:textFontWeight="600"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="@font/montserrat_bold" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView2"
+        android:layout_width="268dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="223dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
+        app:layout_constraintVertical_bias="0.467">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/rectangle"
+            >
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="161dp"
+                app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:height="18dp"
+                android:background="#FFD9ECF2"
+                android:gravity="left"
+                android:lineHeight="18sp"
+                android:text="Trop !"
+                android:textColor="@color/itemactif"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_gravity="left"
+                android:background="#FFD9ECF2"
+                android:gravity="left"
+                android:text="@string/defireussi"
+                android:textColor="#FF002D40"
+                android:textSize="12sp"
+                android:textStyle="normal"
+
+                tools:paddingTop="15dp" />
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/check"
+                android:layout_gravity="center"
+
+                />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/activity_main_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:background="#FFFFFF"
+        app:itemIconTint="@drawable/bottom_nav_colors"
+        app:itemTextColor="@drawable/bottom_nav_colors"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView27"
+        app:menu="@menu/btn_navig_item" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="38dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="356dp"
+        android:src="@drawable/profil3x"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main_bottom_navigation"
+        app:layout_constraintEnd_toStartOf="@menu/btn_navig_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView27"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/progressBar7"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="237dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="392dp"
+        android:background="@drawable/progressbarbg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView27" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="122dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="122dp"
+        android:layout_marginStart="100dp"
+        android:width="138dp"
+        android:height="15dp"
+        android:lineHeight="15sp"
+        android:text="Votre progression"
+        android:textColor="#FF002D40"
+        android:textFontWeight="500"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView27"
+        app:layout_constraintVertical_bias="0.913"
+        tools:fontFamily="@font/montserrat" />
+
+
+</android.support.constraint.ConstraintLayout>

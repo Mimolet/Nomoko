@@ -7,6 +7,7 @@
     <string name="channel_name">ChannelChallenge</string>
     <string name="channel_description">oui</string>
     <!-- Interface -->
+    <string name="defireussi">Defi reussi</string>
     <string name="bienvenue"><b><font size="30">Bienvenue sur nomoko !</font> </b>\n
         La prochaine étape consiste à remplir un formulaire.
         Ça ne vous prendra que 10 minutes et permettra de vous construire un profil.

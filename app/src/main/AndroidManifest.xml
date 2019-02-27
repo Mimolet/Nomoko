@@ -6,9 +6,8 @@
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
-        android:icon="@drawable/icon_app"
+        android:icon="@mipmap/icon_app"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
@@ -35,7 +34,10 @@
         <activity android:name=".views.TestPersoActivity" />
         <activity android:name=".views.BienvenueActivity" />
         <activity android:name=".views.ResultatTestActivity" />
-        <activity android:name=".views.ParametresActivity"></activity>
+        <activity android:name=".views.ParametresActivity" />
+        <activity android:name=".views.DefisReussisActivity">
+
+        </activity>
     </application>
 
 </manifest>

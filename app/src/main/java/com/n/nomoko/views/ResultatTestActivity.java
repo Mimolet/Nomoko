@@ -26,7 +26,7 @@ public class ResultatTestActivity extends AppCompatActivity {
         boutonAccueil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ResultatTestActivity.this, AccueilActivity.class);
+                Intent intent = new Intent(ResultatTestActivity.this, RecompenseActivity.class);
                 finish();
                 startActivity(intent);
             }
@@ -74,7 +74,6 @@ public class ResultatTestActivity extends AppCompatActivity {
         BarTactique.setProgress(tactiquePourcent);
 
         ImageView imageView = findViewById(R.id.imagePersonnalite);
-        /*TODO: importer les images des personnalité en svg*/
 
         switch (personnalite) {
             case "Analyste" :

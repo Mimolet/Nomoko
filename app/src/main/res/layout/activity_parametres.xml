@@ -108,7 +108,6 @@
         android:layout_marginStart="46dp"
         android:layout_marginTop="20dp"
         android:checked="true"
-        android:background="#80FFC5C7"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView23"

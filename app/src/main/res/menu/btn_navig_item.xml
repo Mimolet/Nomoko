@@ -10,11 +10,6 @@
     />
 
     <item
-        android:id="@+id/action_param"
-        android:enabled="true"
-        android:icon="@drawable/ic_parametres"
-        android:title="Paramètres" />
-    <item
         android:id="@+id/action_defis"
         android:enabled="true"
         android:icon="@drawable/ic_defis"
@@ -37,5 +32,11 @@
         android:title="Profil"
         app:showAsAction="ifRoom"
         />
+
+    <item
+        android:id="@+id/action_param"
+        android:enabled="true"
+        android:icon="@drawable/ic_parametres"
+        android:title="Paramètres" />
 
 </menu>
