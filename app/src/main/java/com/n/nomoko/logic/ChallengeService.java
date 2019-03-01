@@ -72,12 +72,21 @@ public class ChallengeService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         //validation defi
-        long idDefi = intent.getLongExtra("idDefi", 0);
-        validerDefi(idDefi);
-        this.experience += 10;
-        gestionExperience();
+        long idDefi = intent.getLongExtra("idDefi", -1);
+        if (idDefi != -1) {
+            validerDefi(idDefi);
+            this.experience += 10;
+            gestionExperience();
+        }
+        //premiers défis
+        boolean premiersDefis = intent.getBooleanExtra("premiersDefis", false);
+        if (premiersDefis) {
+            choixDefi();
+        }
     }
 
+
+    /*TODO : faire migrer cette fonction dans une classe à part*/
     private void gestionExperience () {
         if (this.experience > this.palierExp) {
             this.experience = this.experience - this.palierExp;
@@ -113,6 +122,7 @@ public class ChallengeService extends IntentService {
         if (listeModifiee.size() <= 3) {
             if (listeModifiee.size() == 0) {
                 notifieNvxDefis(new ArrayList<Defi>());
+                /*TODO : gérer ce cas dans l'accueil*/
             } else {
                 notifieNvxDefis(listeModifiee);
             }
@@ -133,9 +143,19 @@ public class ChallengeService extends IntentService {
             defisChoisis.add(listeModifiee.get(troisiemeDefiIndex));
 
             if (notif) {
+                SharedPreferences infoPerso = PreferenceManager.getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editeur = infoPerso.edit();
+                editeur.putBoolean("nouveauxDefis", true);
+                editeur.apply();
                 notifieNvxDefis(defisChoisis);
             } else {
-                // TODO : inscription dans les shared pref les id des nouveaux défs. Verif dans accueil
+                SharedPreferences infoPerso = PreferenceManager.getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editeur = infoPerso.edit();
+                editeur.putBoolean("nouveauxDefis", true);
+                editeur.putInt("premierDefiID", premierDefiIndex);
+                editeur.putInt("deuxiemeDefiID", deuxiemeDefiIndex);
+                editeur.putInt("troisiemeDefiID", troisiemeDefiIndex);
+                editeur.apply();
             }
 
         }

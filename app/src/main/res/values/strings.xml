@@ -16,8 +16,7 @@
     <string name="avatar">Avatar</string>
     <string name="bouton">C\'est parti !</string>
     <string name="recompense">Vous pouvez maintenant créer votre récompense</string>
-    <string name="description_recompense">Votre récompense est unique, vous pouvez soit la créer
-    vous même ou en choisir une proposée. Choisissez bien, vous ne pourrez plus la modifier jusqu\'à
+    <string name="description_recompense">Votre récompense est unique, c\'est vous qui décidez ! Choisissez bien, vous ne pourrez plus la modifier jusqu\'à
         ce qu\'elle soit débloquée.
     </string>
     <string name="editext_recompense">Créez votre récompense</string>
@@ -28,6 +27,7 @@
     <string name="personnaliteSentinelle">Sentinelle</string>
     <string name="personnaliteExplorateur">Explorateur</string>
     <string name="notifparam">Activer/désactiver les notifications.</string>
+    <string name="editableText">editable</string>
     <!-- Base de données -->
     <!-- Catégories -->
     <string name="dbCatEsprit">Esprit</string>

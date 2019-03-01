@@ -5,9 +5,9 @@ public class Trophee {
     private int nomTroID;
     private int txtTroID;
     private boolean obtenuTro;
-    private String illustrationPathTro;
+    private int illustrationPathTro;
 
-    public Trophee(long idTrophee, int nomTroID, int txtTroID, boolean obtenuTro, String illustrationPathTro) {
+    public Trophee(long idTrophee, int nomTroID, int txtTroID, boolean obtenuTro, int illustrationPathTro) {
         this.idTrophee = idTrophee;
         this.nomTroID = nomTroID;
         this.txtTroID = txtTroID;
@@ -48,11 +48,11 @@ public class Trophee {
         this.obtenuTro = obtenuTro;
     }
 
-    public String getIllustrationPathTro() {
+    public int getIllustrationPathTro() {
         return illustrationPathTro;
     }
 
-    public void setIllustrationPathTro(String illustrationPathTro) {
+    public void setIllustrationPathTro(int illustrationPathTro) {
         this.illustrationPathTro = illustrationPathTro;
     }
 }

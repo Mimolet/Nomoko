@@ -5,7 +5,7 @@
     <size
         android:height="297dp"
         android:width="268dp" />
-    <stroke android:width="2dp" android:color="#FF002D40" />
+
     <padding android:left="2dp"
         android:top="2dp"
         android:right="2dp"

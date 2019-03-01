@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewAlert"
+        android:layout_width="match_parent"
+        android:layout_height="254dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginBottom="157dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutAlertDefi"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:background="@drawable/rectangle_alert"
+            android:orientation="horizontal">
+
+
+
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+</android.support.constraint.ConstraintLayout>

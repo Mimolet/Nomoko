@@ -9,12 +9,10 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginBottom="548dp"
         android:layout_marginEnd="85dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="85dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="69dp"
         android:width="235dp"
@@ -24,28 +22,12 @@
         android:textColor="#FF002D40"
         android:textSize="18sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/activity_main_bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/circleImageView2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="484dp"
-        android:layout_marginEnd="270dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="270dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="106dp"
-        android:src="@drawable/profil3x"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.359" />
+
 
 
     <android.support.design.widget.BottomNavigationView
@@ -68,35 +50,29 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="269dp"
+        android:layout_height="19dp"
         android:layout_marginBottom="440dp"
         android:layout_marginEnd="51dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="51dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="181dp"
-        android:width="269dp"
-        android:height="19dp"
         android:lineHeight="19sp"
         android:text="Mes défis en cours"
         android:textColor="#FF002D40"
-        app:layout_constraintBottom_toTopOf="@+id/activity_main_bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
         tools:fontFamily="@font/montserrat_bold" />
 
     <TextView
         android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="55dp"
+        android:layout_width="138dp"
+        android:layout_height="15dp"
+        android:layout_marginBottom="514dp"
         android:layout_marginEnd="126dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="126dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="111dp"
         android:width="138dp"
         android:height="15dp"
         android:lineHeight="15sp"
@@ -104,64 +80,66 @@
         android:text="Votre progression"
         android:textColor="#FF002D40"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/circleImageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
         tools:fontFamily="@font/montserrat" />
 
     <ProgressBar
         android:id="@+id/progressBar3"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="269dp"
-        android:layout_height="19dp"
-        android:layout_marginBottom="34dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="9dp"
+        android:layout_width="237dp"
+        android:layout_height="12dp"
+        android:layout_marginBottom="493dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="135dp"
         android:background="@drawable/progressbarbg"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/circleImageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView24"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+         />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="484dp"
+        android:layout_marginEnd="270dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="106dp"
+        android:src="@drawable/profil3x"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        />
 
     <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="268dp"
-        android:layout_height="300dp"
-        android:layout_marginBottom="223dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="120dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.467">
+    android:id="@+id/horizontalScrollView"
+    android:layout_width="wrap_content"
+    android:layout_height="300dp"
+    android:layout_marginBottom="118dp"
+    android:layout_marginEnd="52dp"
+    android:layout_marginStart="40dp"
+    android:layout_marginTop="225dp"
+    app:layout_constraintBottom_toTopOf="parent"
+    app:layout_constraintEnd_toStartOf="parent"
+    app:layout_constraintStart_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="parent">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="186dp"
-            android:background="@drawable/rectangle"
-            >
+    <LinearLayout
+        android:id="@+id/lin_layout_accueil_scroll"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="match_parent"
-                android:layout_height="161dp"
-                app:srcCompat="@drawable/emotif_defi_icon" />
-        </LinearLayout>
+    </LinearLayout>
 
-    </HorizontalScrollView>
+</HorizontalScrollView>
 
 
 </android.support.constraint.ConstraintLayout>

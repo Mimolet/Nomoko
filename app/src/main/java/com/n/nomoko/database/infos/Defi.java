@@ -8,10 +8,11 @@ public class Defi {
     private String categorieDefi;
     private String traitDefi;
     private boolean reussiDefi;
-    private String illustrationPathDefi;
+    private boolean enCours;
+    private int illustrationPathDefi;
     private int difficulte;
 
-    public Defi(long idDefi, int nomDefi, int txtDefiID, int dureeDefi, String categorieDefi, String traitDefi, boolean reussiDefi, String illustrationPathDefi, int difficulte) {
+    public Defi(long idDefi, int nomDefi, int txtDefiID, int dureeDefi, String categorieDefi, String traitDefi, boolean reussiDefi, boolean enCours, int illustrationPathDefi, int difficulte) {
         this.idDefi = idDefi;
         this.nomDefiID = nomDefi;
         this.txtDefiID = txtDefiID;
@@ -19,6 +20,7 @@ public class Defi {
         this.categorieDefi = categorieDefi;
         this.traitDefi = traitDefi;
         this.reussiDefi = reussiDefi;
+        this.enCours = enCours;
         this.illustrationPathDefi = illustrationPathDefi;
         this.difficulte = difficulte;
     }
@@ -80,11 +82,11 @@ public class Defi {
         this.reussiDefi = reussiDefi;
     }
 
-    public String getIllustrationPathDefi() {
+    public int getIllustrationPathDefi() {
         return illustrationPathDefi;
     }
 
-    public void setIllustrationPathDefi(String illustrationPathDefi) {
+    public void setIllustrationPathDefi(int illustrationPathDefi) {
         this.illustrationPathDefi = illustrationPathDefi;
     }
 
@@ -94,5 +96,13 @@ public class Defi {
 
     public void setDifficulte(int difficulte) {
         this.difficulte = difficulte;
+    }
+
+    public boolean isEnCours() {
+        return enCours;
+    }
+
+    public void setEnCours(boolean enCours) {
+        this.enCours = enCours;
     }
 }

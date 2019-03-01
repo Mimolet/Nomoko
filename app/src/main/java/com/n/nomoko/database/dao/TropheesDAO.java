@@ -33,7 +33,7 @@ public class TropheesDAO extends DAOBase {
             c.close();
             return null;
         }
-        Trophee resultat = new Trophee(idTrophee, c.getInt(1), c.getInt(2), c.getInt(3) == 1, c.getString(4));
+        Trophee resultat = new Trophee(idTrophee, c.getInt(1), c.getInt(2), c.getInt(3) == 1, c.getInt(4));
         c.close();
         return resultat;
     }

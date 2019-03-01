@@ -114,6 +114,18 @@
         app:layout_constraintTop_toBottomOf="@id/textView27"
         app:menu="@menu/btn_navig_item" />
 
+    <ProgressBar
+        android:id="@+id/progressBar7"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="237dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="392dp"
+        android:background="@drawable/progressbarbg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView27" />
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImageView3"
         android:layout_width="50dp"
@@ -129,17 +141,7 @@
         app:layout_constraintTop_toBottomOf="@id/textView27"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ProgressBar
-        android:id="@+id/progressBar7"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="237dp"
-        android:layout_height="12dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginTop="392dp"
-        android:background="@drawable/progressbarbg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView27" />
+
 
     <TextView
         android:id="@+id/textView25"

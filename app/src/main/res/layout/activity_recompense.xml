@@ -53,7 +53,7 @@
         tools:fontFamily="@font/montserrat" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextRecompense"
         android:layout_width="346dp"
         android:layout_height="85dp"
         android:layout_marginBottom="367dp"

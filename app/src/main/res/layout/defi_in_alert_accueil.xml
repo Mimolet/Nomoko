@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewNouveauDefi"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:srcCompat="@drawable/emotif_defi_icon" />
+
+    <TextView
+        android:id="@+id/titreNouveauDefi"
+        android:layout_width="214dp"
+        android:layout_height="18dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:layout_marginTop="105dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="107dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:text="@string/editableText"
+        android:textColor="#FFFF414D"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="8sp"
+        android:autoSizeMaxTextSize="14sp"
+        android:autoSizeStepGranularity="1sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/texteNouveauDefi"
+        android:layout_width="226dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="8sp"
+        android:autoSizeMaxTextSize="12sp"
+        android:autoSizeStepGranularity="1sp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/editableText"
+
+        android:textColor="#FF002D40" />
+
+    <Button
+        android:id="@+id/buttonAccepterDefi"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:background="@drawable/btnjaccepte"
+        android:fontFamily="@font/montserrat"
+        android:text="J'accepte"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+
+        />
+
+</android.support.constraint.ConstraintLayout>

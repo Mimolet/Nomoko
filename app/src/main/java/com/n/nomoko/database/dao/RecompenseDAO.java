@@ -20,7 +20,7 @@ public class RecompenseDAO extends DAOBase {
         ContentValues valeur = new ContentValues();
         valeur.put(RecompenseDAO.TEXTE, r.getTxtRec());
         valeur.put(RecompenseDAO.OBTENUE, r.isObtenuRec());
-        this.mDb.insert(DefisDAO.TABLE_NAME, null, valeur);
+        this.mDb.insert(RecompenseDAO.TABLE_NAME, null, valeur);
     }
 
     public Recompense selectionner (long idRecompense) {
